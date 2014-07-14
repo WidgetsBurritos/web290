@@ -119,7 +119,6 @@ print <<<HTML
 </div>
 HTML;
 
-print $x; 
 
 //*/
 
