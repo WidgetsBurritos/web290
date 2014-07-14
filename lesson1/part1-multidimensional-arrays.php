@@ -5,6 +5,7 @@
 
 
 // this is just a helper file I made to simplify the code on these various examples.
+// any functions that start with two underscores, come from _top.php
 include_once("_top.php");
 
 
