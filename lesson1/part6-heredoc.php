@@ -100,7 +100,6 @@ $x = <<<HTML
 </div>
 HTML;
 
-print $x; 
 
 //*/
 
