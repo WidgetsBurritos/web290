@@ -43,7 +43,7 @@ ini_set('display_errors', '1');
         }
 
         #students .student .name { font-size: 1.3em; }
-        #students .student .grades { float: right; width: 10%;  text-align: center; padding: 0px 5px; }
+        #students .student .grades { float: right; width: 10%;  text-align: center; padding: 0 5px; }
         #students .student .grade-summary { float: left; width: 70%; padding: 0 5%;  border: 1px solid #c0c0c0; background: #ffffff;}
         #students .student .label { font-weight: bold;  }
     </style>
@@ -51,7 +51,7 @@ ini_set('display_errors', '1');
 <body>
 
 <ul id="navigation">
-    <li><a href="./">Project Details</a></li>
+    <li><a href="http://web290.site-sandbox.com/">Project Details</a></li>
     <?php
     for ($i=1; $i<=5; $i++)
         printf('<li><a href="test%d.php">Test %d</a></li>', $i, $i);
