@@ -1,0 +1,150 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*** CUSTOM PAGE CSS */
+.clear {
+    clear: both;
+}
+
+body {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+header {
+    background: #1c3355;
+    color: #ffffff;
+    padding: 20px 50px;
+    height: 70px;
+}
+
+header .inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header .inner h2 {
+    font-size: 32px;
+    margin-left: 50px;
+}
+
+nav {
+    position: relative;
+    top: -32px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #000000;
+    height: 32px;
+    -webkit-border-top-left-radius: 16px;
+    -webkit-border-top-right-radius: 16px;
+    -moz-border-radius-topleft: 16px;
+    -moz-border-radius-topright: 16px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: block;
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #ffffff;
+    line-height: 32px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffff00;
+}
+
+#wrapper {
+    position: relative;
+    top: -32px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 50px;
+    min-height: 200px;
+    background: #f0f0f0;
+}
+
+#wrapper h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+#wrapper p {
+    margin-bottom: 16px;
+}
+
+footer {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    top: -32px;
+    clear: both;
+    background: #999999;
+    color: #000000;
+    padding: 10px 50px;
+    font-size: 12px;
+    text-align: center;
+    -webkit-border-bottom-right-radius: 16px;
+    -webkit-border-bottom-left-radius: 16px;
+    -moz-border-radius-bottomright: 16px;
+    -moz-border-radius-bottomleft: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
