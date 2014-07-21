@@ -1,7 +1,7 @@
 <?php
-require("includes/application_top.php");
-
+require_once("includes/application_top.php");
 include_once("includes/header.php");
+
 ?>
 
 <div id="wrapper">

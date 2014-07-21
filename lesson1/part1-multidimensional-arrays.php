@@ -8,7 +8,8 @@
 // any functions that start with two underscores, come from _top.php
 include_once("_top.php");
 
-
+//////////////////////////////////////////////////////////////////////////
+/*
 // standard associative array
 
 $book1 = array('title' => 'The Fantastic Light', 'author' => 'Terry Pratchett', 'year' => 1997);
@@ -20,9 +21,10 @@ __pre_output('Book 1', $book1);
 __pre_output('Book 2', $book2);
 __pre_output('Book 3', $book3);
 
+//*/
 
 //////////////////////////////////////////////////////////////////////////
-//*
+/*
 
 
 // two dimensional array
@@ -57,7 +59,7 @@ __pre_output('2D Movie Array', $movies);
 
 
 //////////////////////////////////////////////////////////////////////////
-//*
+/*
 
 // three dimensional arrays
 $products = array(
@@ -94,7 +96,7 @@ __pre_output('3D Product Array - version 1', $products);
 
 
 //////////////////////////////////////////////////////////////////////////
-//*
+/*
 
 // When nesting deep into a multidimension array, sometimes makes sense to extract some of these variables.
 // So instead of writing $products all the way out we could do something like this:

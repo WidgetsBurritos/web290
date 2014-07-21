@@ -5,7 +5,7 @@
  */
 function db_select($fields, $table, $where, $limit) {
     $sql = sprintf('SELECT %s FROM %s WHERE %s LIMIT %s', $fields, $table, $where, $limit);
-    if (!mysql_connect(DB_HOST, DB_USER, DB_PASS))  {
+    if (!mysql_connect(DB_HOST, DB_USER, DB_PASSWORD))  {
         return null;
     }
     if (!mysql_select_db(DB_NAME)) {
@@ -15,11 +15,12 @@ function db_select($fields, $table, $where, $limit) {
 
     $rows = array();
     $result = mysql_query($sql);
-    if (!$result) { return array(); }
+    if (!$result) { return $rows; }
 
     while ($row = mysql_fetch_assoc($result)) {
         $rows[] = $row;
     }
+
     return $rows;
 }
 

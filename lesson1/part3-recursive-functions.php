@@ -41,6 +41,7 @@ So let's define our conditions:
 ---------------------------------
 */
 
+
 function factorial ($n) {
     // We got a bad input so exit
     if ($n < 0) { return -1; }
@@ -52,12 +53,15 @@ function factorial ($n) {
     return $n * factorial($n-1);
 }
 
+
+
+/*
 // let's do a factorial of every number from 0 to 10
 for ($i=0; $i<=10; $i++) {
     print $i . "! = " .factorial($i) . "<br />\n";
 }
 print "<br /><br />";
-
+//*/
 
 
 

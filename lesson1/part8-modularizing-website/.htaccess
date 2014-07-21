@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
-RewriteBase /working-projects/lesson1/part8-modularizing-website/
+RewriteBase /web290/lesson1/part8-modularizing-website/
 
 # See http://httpd.apache.org/docs/current/rewrite/flags.html for list of flags
 RewriteRule ^index\.php$ - [L]

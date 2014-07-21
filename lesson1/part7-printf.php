@@ -12,7 +12,7 @@ include_once("_top.php");
 // Suppose we need to be a bit more restrictive with our string formats.   
 // Suppose we have three variables for a product and our $quantity and $price variables 
 // managed to get malformed by a hacker.
-
+/*
 $product_name = 'Bounty Paper Towels';
 $quantity = "-3XYZ";
 $price = "xa#5.99xyz"; 
@@ -29,7 +29,7 @@ print <<<HTML
 </div>
 <br /><br />
 HTML;
-
+//*/
 
 // We output the malformed string just as it's entered.  If hacker inserted something malicious, we may have just 
 // opened our site or the user's browser to malicious attacks. Using printf we can explicitly specify our string format. 
@@ -40,6 +40,7 @@ HTML;
 
 // See book for more type specifiers.
 
+/*
 printf('<div class="product">
     <div class="product_name">%s</div>
     <div class="quantity">%d</div>
@@ -47,12 +48,14 @@ printf('<div class="product">
 </div>
 <br /><br />
 ', $product_name, $quantity, $price);
-
+//*/
 
 
 // sprintf is the same as printf, except it returns a string instead of directly outputting it. 
 
 
+
+/*/
 $x = sprintf('<div class="product">
     <div class="product_name">%s</div>
     <div class="quantity">%d</div>
@@ -61,4 +64,5 @@ $x = sprintf('<div class="product">
 <br /><br />
 ', $product_name, $quantity, $price);
 
-print $x; 
+print $x;
+//*/

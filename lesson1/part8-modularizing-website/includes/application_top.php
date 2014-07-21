@@ -1,10 +1,9 @@
 <?php
-require("config.php");
-require("database.php");
-require("functions.php");
-require("errors.php");
+require_once("config.php");
+require_once("database.php");
+require_once("functions.php");
+require_once("errors.php");
 
-$page = array();
 
 if (isset($_GET['slug'])) {
     $page = get_page_by_slug($_GET['slug']);
@@ -13,4 +12,6 @@ if (isset($_GET['slug'])) {
 } else {
     $page = get_page_by_slug('home');
 }
+
+
 

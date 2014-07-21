@@ -4,10 +4,14 @@
  */
 
 function get_page_by_slug($slug) {
-    return array_shift(db_select('*', 'pages', sprintf("slug = '%s'", mysql_real_escape_string($slug)), "0,1" ));
+    $rows = db_select('*', 'pages', sprintf("slug = '%s'", mysql_real_escape_string($slug)), "0,1" );
+    if (empty($rows)) return array();
+    return array_shift($rows);
 }
 function get_page_by_id($id) {
-    return array_shift(db_select('*', 'pages', sprintf("page_id= '%s'", mysql_real_escape_string($id)), "0,1"));
+    $rows = db_select('*', 'pages', sprintf("page_id= '%s'", mysql_real_escape_string($id)), "0,1");
+    if (empty($rows)) return array();
+    return array_shift($rows);
 }
 
 function get_all_pages() {
