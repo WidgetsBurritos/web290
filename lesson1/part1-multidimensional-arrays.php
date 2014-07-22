@@ -33,7 +33,7 @@ $books = array(
     array('title' => 'Daemon', 'author' => 'Daniel Suarez', 'year' => 2006),
     array('title' => 'Eric', 'author' => 'Terry Pratchett', 'year' => 1990),
 );
-
+ß
 
 __pre_output('2D Book Array', $books);
 
