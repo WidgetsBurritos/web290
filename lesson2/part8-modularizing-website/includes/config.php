@@ -1,10 +1,11 @@
 <?php
 
+error_reporting(E_ERROR);
 ini_set('display_errors', '1');
 
 define('SLUGS_INSTEAD_OF_IDS', false);
 define('SEO_FRIENDLY_URLS', false);
-define('URL_BASE', '/web290/lesson1/part8-modularizing-website');
+define('URL_BASE', '/web290/lesson2/part8-modularizing-website');
 
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');

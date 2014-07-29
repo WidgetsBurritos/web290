@@ -1,66 +1,32 @@
-<?php
-require_once("_top.php");
+<!DOCTYPE html>
+<head>
+    <title>Test Code</title>
+</head>
+<body>
+<div id="wrapper">
 
+    <?php
 
-require_once("vehicle.class.php");
+    $path = dirname(__FILE__);
+    $dir = new DirectoryIterator($path);
 
+    $files = array();
+    foreach ($dir as $fileinfo) {
+        $filename = $fileinfo->getFilename();
+        if ($fileinfo->isDot() || $filename == basename(__FILE__) || substr($filename,0,1) == "_") { continue; }
+        $files[] = $fileinfo->getFilename();
 
-//*
-$vehicle_properties = array(
-    'color' => 'red',
-    'vin' => '12345678901234567',
-    'license_plate' => 'ABC1234',
-);
-$vehicle = new Vehicle($vehicle_properties);
+    }
 
-//*/
+    sort($files);
 
+    print '<ul>';
+    foreach ($files as $file) {
+        printf ('<li><a href="%s">%s</a></li>', $file, $file);
+    }
+    print '</ul>';
+    ?>
+</div>
+</body>
+</html>
 
-/*
-// Creating a second instance...  You can have MULTIPLE instances
-
-$vehicle2_properties = array(
-    'color' => 'red',
-    'vin' => '09876543210987654',
-    'license_plate' => 'ZZZ1222',
-);
-$vehicle2 = new Vehicle($vehicle_properties);
-
-//*/
-
-
-
-/*
-// Show our vehicle's license plate
-print $vehicle->license_plate.'<br />';
-
-//*/
-
-
-
-/*
-// OH NO! Our car's been stolen and someone just swapped out the license plate with another one.
-$vehicle->license_plate = 'XYZ9988';
-
-// Show our vehicle's license plate.
-print $vehicle;
-//*/
-
-
-/*
-// Instantiate another vehicle using the same variable. This forces the destructor on the previous vehicle to trigger.
-$vehicle = new Vehicle($vehicle_properties);
-print $vehicle;
-//*/
-
-
-/*
-print "VIN: ".$vehicle->vin.'<br />';
-//*/
-
-
-
-/*
-print 'VIN: '.$vehicle->getVIN().'<br />';
-
-//*/

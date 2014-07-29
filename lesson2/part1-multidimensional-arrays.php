@@ -107,6 +107,6 @@ $products2 = array('books' => $books, 'movies' => $movies);
 
 __pre_output('3D Product Array - version 2', $products2);
 
-
+//*/
 
 

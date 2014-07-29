@@ -1,21 +1,9 @@
 <?php
 
-/** just a helper file */
-require_once("_top.php");
-
-
-
-
-
-
-
 class Vehicle {
-    /**
-     * To illustrate the difference between public and private variables I have made $license_plate public and
-     *
-     */
-    private $color, $vin;
-    public $license_plate;
+    private $vin, $quiet;
+    protected $year, $make, $model;
+    public $color, $license_plate;
 
 
 
@@ -48,25 +36,38 @@ class Vehicle {
             $this->license_plate = null;
         }
 
-        // Let the world know the vehicle has been created.
-        printf ("Brand new car with VIN %s has just been created.<br /><br />", $this->vin);
+        $this->quiet = (isset($properties['quiet']) && $properties['quiet']);
+
+        if (!$this->quiet) {
+            // Let the world know the vehicle has been created.
+            printf ("Brand new car with VIN %s has just been created.<br /><br />", $this->vin);
+        }
     }
 
     /**
      * Destroy our object
      */
     public function __destruct() {
-        printf ("This car with VIN %s will self destruct in...", $this->vin);
-        for ($i=3; $i>0; $i--) {
-            printf ("\n%d", $i);
+        if (!$this->quiet) {
+            printf ("This car with VIN %s will self destruct in...", $this->vin);
+            for ($i=3; $i>0; $i--) {
+                printf ("\n%d", $i);
+            }
         }
         $this->color = null;
         $this->vin = null;
         $this->license_plate = null;
-        print "\nBOOM!\n<br /><br />\n";
+        $this->year = null;
+        $this->make = null;
+        $this->model = null;
+        if (!$this->quiet) {
+            print "\nBOOM!\n<br /><br />\n";
+        }
     }
 
-
+    /**
+     * __toString() is a special function that will be used to output the object as a string
+     */
     public function __toString() {
         return sprintf ('I am a <strong>%s</strong> vehicle with license plate: <strong>%s</strong>.<br /><br />',
             $this->color,
@@ -74,9 +75,17 @@ class Vehicle {
         );
     }
 
+    /** retrieves the vehicles VIN.  Necessary since it's a private property */
     public function getVIN() {
         return $this->vin;
     }
+
+    /** Allows us to modify a class property. Normally used in conjunction with "private" or "protected" properties,
+     but can be used with any property. */
+    public function paintCar($color){
+        $this->color = $color;
+    }
+
 }
 
 
