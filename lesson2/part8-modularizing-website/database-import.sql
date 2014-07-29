@@ -1,5 +1,5 @@
 
---
+----
 -- Table structure for table `pages`
 --
 
@@ -21,3 +21,4 @@ INSERT INTO `pages` (`page_id`, `slug`, `page_title`, `content`) VALUES
 (1, 'home', 'Home Page', 'This is the home page'),
 (2, 'about', 'About Us', 'Here''s something interesting about us.'),
 (3, 'contact', 'Contact Us', 'Call us at (210) 555-5555');
+
