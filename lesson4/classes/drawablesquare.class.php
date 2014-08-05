@@ -2,7 +2,8 @@
 
 class DrawableSquare extends DrawableShape {
     private $side;
-    public function __construct($side) {
+    public function __construct($side,$startX,$startY, $scaleFactor) {
+        parent::__construct($startX, $startY, $scaleFactor);
         $this->side = $side;
     }
     function getPoints()

@@ -1,5 +1,6 @@
 <?php
 
 interface iDrawable {
-    function drawMe($startX, $startY, $scaleFactor);
+    function drawMe();
+    function rotate($clockwise);
 }

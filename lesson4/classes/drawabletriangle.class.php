@@ -2,7 +2,8 @@
 
 class DrawableTriangle extends DrawableShape {
     private $side1, $side2, $side3;
-    function __construct($side1,$side2,$side3) {
+    function __construct($side1,$side2,$side3,$startX,$startY,$scaleFactor) {
+        parent::__construct($startX,$startY,$scaleFactor);
         $this->side1 = $side1;
         $this->side2 = $side2;
         $this->side3 = $side3;

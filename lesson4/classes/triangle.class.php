@@ -11,9 +11,10 @@ class Triangle extends Shape {
     function getArea()
     {
         // formula for area of triangle where three sides given is
-        //     SQRT ( perimeter/2 * (perimeter/2 - side1) * (perimeter/2 - side2) * (perimeter/2 - side3))
-        $p = $this->getPerimeter()/2;
-        return sqrt($p*($p-$this->side1)*($p-$this->side2)*($p-$this->side3));
+        //     SQRT ( z * (z - side1) * (z - side2) * (z - side3))
+        //          WHERE z = (side1 + side2 + side3) / 2
+        $z = $this->getPerimeter()/2;
+        return sqrt($z*($z-$this->side1)*($z-$this->side2)*($z-$this->side3));
     }
 
     function getPerimeter()

@@ -2,41 +2,58 @@
 <head>
     <title></title>
     <style type="text/css">
-        #myCanvas { background: #c8c8c8; }
+        #canvases { position: relative; background: #c8c8c8; width: 800px; height: 500px; }
+        #canvases canvas { position: absolute; left: 0; top: 0; }
+        #myCanvas {  }
     </style>
+    <script type="text/javascript">
+        /**
+         * creates a new HTML canvas
+         * @returns {HTMLElement}
+         */
+        function createNewCanvas() {
+            var canvas = document.createElement('canvas');
+            canvas.width = 800;
+            canvas.height = 500;
+            document.getElementById("canvases").appendChild(canvas);
+            return canvas;
+        }
+    </script>
 </head>
 
 
 <body>
-<canvas id="myCanvas" width="800" height="500"></canvas>
+
+
+<div id="canvases"></div>
+
 
 
 <script type="text/javascript">
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
+<?php
 
-    <?php
+// DRAW A SQUARE
+/*
+$square = new DrawableSquare(100,200,100,1.6);
+$square->drawMe();
+//*/
 
-    /*
-    $square = new DrawableSquare(100);
-    $square->drawMe(400,250);
-    //*/
+// DRAW A TRIANGLE
+/*
+$triangle = new DrawableTriangle(150,200,250,200,100,1.6);
+$triangle->drawMe();//->rotate(true);
+//*/
 
-    /*
-    $triangle = new DrawableTriangle(150,200,250);
-    $triangle->drawMe(200,100,1.6);
-    //*/
-
-
-    /*
-    $picture = new DrawablePicture('logo.png');
-    $picture->drawMe(100,400,'0.5');
-    //*/
+//DRAW AN IMAGE
+/*
+$picture = new DrawablePicture('logo.png', 100,400,'0.5');
+$picture->drawMe();//->rotate(false);
+//*/
 
 
-    ?>
+?>
+
 </script>
-
 
 
 </body>
